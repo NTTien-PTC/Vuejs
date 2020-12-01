@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title> Vuejs </title>
+        <script src="vue.js"></script>
+    </head>
+    
+    <div id="obj">
+            <p v-html="html"></p>
+            <p v-once> {{noidung }} - {{post()}}</p>
+            <a v-bind:href="link">install vuejs</a>
+
+    <script>
+        new Vue({
+            el: "#obj",
+            data: {
+                noidung:"hello word",
+                tieude: "hom nay la thu 3",
+                link: 'https://vi.vuejs.org/v2/guide/installation.html',
+                html: '<a href="dasdssad">Get password </a>'
+            },
+            methods: {
+                say: function(){
+                    document.write("Hello")
+                },
+                post: function(){
+                    this.noidung = "nd thay doi roi"
+                    return this.tieude
+                
+                } 
+            }
+        })
+
+    </script>
+
+</html>

@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title> Vuejs </title>
+        <script src="vue.js"></script>
+    </head>
+    
+    <div id="obj">
+        <h1>Bam nut tang gia tri</h1>
+        <button v-on:click="tgt">An nut </button>
+        <p>Trang {{demo}}</p>
+       
+        </div>
+    </div>
+    <script>
+        new Vue({
+            el: "#obj",
+            data: {
+                demo: 0,
+                x: 0,
+                y: 0
+            },
+            methods: {
+                
+                tgt: function(){
+                    this.demo++
+                    
+                },
+             
+            }
+        })
+
+    </script>
+
+</html>

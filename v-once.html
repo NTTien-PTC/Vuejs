@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title> Vuejs </title>
+        <script src="vue.js"></script>
+    </head>
+    
+    <div id="obj">    
+            <p v-once> {{noidung }} - {{post() }}</p>
+    <script>
+        new Vue({
+            el: "#obj",
+            data: {
+                noidung:"hello word",
+            },
+            methods: {
+                post: function(){
+                    this.noidung = "nd thay doi roi"
+                    return this.noidung
+                } ,
+                
+            }
+        })
+
+    </script>
+
+</html>

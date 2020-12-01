@@ -1,0 +1,26 @@
+- install Vue.js (https://vi.vuejs.org/v2/guide/installation.html)
+- 2 bản
+	+ development
+	+production
+- Trình duyệt online trỏ đến pb cụ thể luôn (<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>)
+
+-cài đặt bằng Npm (npm install vue )
+
+- Template Syntax(cú pháp mẫu)
+	+ vuejs sử dụng template theo chuẩn html(ko sinh code)
+ 	+ vue sử dụng DOM ảo để quản lí đối tượng 
+ 	+ có  reactivity system(hệ thống phản ứng) đối tượng thay đổi là có thể biết được luôn 
+ - Cách làm việc của template Vuejs
+ 	+tạo đối tượng quản lý nhưng k cần quan tâm đối tượng quản lý là ai
+ 	+ phương thức cần ()
+ 	+ Truy cập đối tượng chỉ cần 'this.'tên thuộc tính cần lấy''
+ 	+ Binding(ràng buộc) sử dụng để dùng thuộc tính  'v-bind'
+ 	+ sử dụng 'v-once ' để lấy giá trị đầu  tiên nếu nội dung bị thay đổi
+ 	+ tất cả dữ liêuj truyền qua html đều là dạng text 
+ 	+ 'v-html' dùng khi khai báo các html trong đối tượng quản lý chứ không phải khai báo trong đối tượng bị quản lý
+ 	+ 'v-on' lắng nghe sự kiện 
+ 		+ v-on:onclick
+ 		+ v-on:mousemove
+ 		+ v-on:mouseover.stop="" // dừng sự sk
+ 	+ đôi tượng event
+ 		+ event.stopPropagation(); // dừng sk

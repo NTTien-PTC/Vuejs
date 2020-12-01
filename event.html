@@ -1,0 +1,35 @@
+    <html>
+        <head>
+            <title> Vuejs </title>
+            <script src="vue.js"></script>
+        </head>
+        <div id="obj">
+            <div v-on:mousemove="toadochuot">
+                <span v-on:mouseover="dungchuot"> Dung su kien</span>
+
+                <p>Toa do cua chuot: {{x}} / {{y}}</p>
+                
+            </div>
+        </div>
+        <script>
+            new Vue({
+                el: "#obj",
+                data: {
+                x: 0,
+                y: 0
+                },
+                methods: {
+                    
+                    toadochuot: function(event){
+                        this.x = event.clientX;
+                        this.y = event.clientY;
+                    },
+                  dungchuot:function(event){
+                    event.stopPropagation();
+                  }
+                }
+            })
+
+        </script>
+
+    </html>
