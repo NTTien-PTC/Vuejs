@@ -7,20 +7,34 @@
 -cài đặt bằng Npm (npm install vue )
 
 - Template Syntax(cú pháp mẫu)
-	+ vuejs sử dụng template theo chuẩn html(ko sinh code)
- 	+ vue sử dụng DOM ảo để quản lí đối tượng 
- 	+ có  reactivity system(hệ thống phản ứng) đối tượng thay đổi là có thể biết được luôn 
+	* vuejs sử dụng template theo chuẩn html(ko sinh code)
+ 	* vue sử dụng DOM ảo để quản lí đối tượng 
+ 	* có  reactivity system(hệ thống phản ứng) đối tượng thay đổi là có thể biết được luôn 
  - Cách làm việc của template Vuejs
- 	+tạo đối tượng quản lý nhưng k cần quan tâm đối tượng quản lý là ai
- 	+ phương thức cần ()
- 	+ Truy cập đối tượng chỉ cần 'this.'tên thuộc tính cần lấy''
- 	+ Binding(ràng buộc) sử dụng để dùng thuộc tính  'v-bind'
- 	+ sử dụng 'v-once ' để lấy giá trị đầu  tiên nếu nội dung bị thay đổi
- 	+ tất cả dữ liêuj truyền qua html đều là dạng text 
- 	+ 'v-html' dùng khi khai báo các html trong đối tượng quản lý chứ không phải khai báo trong đối tượng bị quản lý
- 	+ 'v-on' lắng nghe sự kiện 
- 		+ v-on:onclick
- 		+ v-on:mousemove
- 		+ v-on:mouseover.stop="" // dừng sự sk
- 	+ đôi tượng event
+ 	*tạo đối tượng quản lý nhưng k cần quan tâm đối tượng quản lý là ai
+ 	* phương thức cần ()
+ 	* Truy cập đối tượng chỉ cần 'this.'tên thuộc tính cần lấy''
+ 	* Binding(ràng buộc) sử dụng để dùng thuộc tính  'v-bind'
+ 	* sử dụng 'v-once ' để lấy giá trị đầu  tiên nếu nội dung bị thay đổi
+ 	* tất cả dữ liêuj truyền qua html đều là dạng text 
+ 	* 'v-html' dùng khi khai báo các html trong đối tượng quản lý chứ không phải khai báo trong đối tượng bị quản lý
+ 	* '*v-on' lắng nghe sự kiện 
+ 		+ 'v-on:onclick'
+ 		+ 'v-on:mousemove'
+ 		+ 'v-on:mouseover.stop=""' // dừng sự sk
+ 	* Nhóm điều kiện với v-if trên thẻ <template>
+		+ Vì là một directive, v-if phải được dùng trên một phần tử đơn lẻ (single element) như <p> hoặc <div>. Nếu chúng ta muốn bật tắt một nhóm các phần tử thì sao? Chỉ cần dùng v-if trên một phần tử <template> với vai trò wrap (bọc) các phần tử lại thành một nhóm. Kết quả render cuối cùng sẽ không có phần tử <template> này.
+		+ 'v-else' dùng để chỉ định khối lệnh cho v-if
+		+ 'v-else-if' đóng vai trò một khối “else if” cho v-if. Directive này có thể được dùng nhiều lần nối tiếp nhau
+		+ 'v-show' Một lựa chọn nữa cho việc hiện hoặc ẩn một phần tử web theo điều kiện là directive v-show. Cách dùng v-show cũng tương tự với v-i
+		+ 'v-if' và v-show – khi nào thì dùng => v-if có phí tổn bật/tắt cao, còn v-show có phí tổn render cao. Vì thế, nếu bạn cần bật/tắt thường xuyên, hãy dùng v-show. Ngược lại, nếu điều kiện ít khi thay đổi trong suốt vòng đời của ứng dụng, hãy dùng v-if.
+	* Map 1 mảng thành các phần tử web với v-for
+		+ Chúng ta có thể dùng directive v-for để render một danh sách các item dựa trên một mảng. Directive v-for đòi hỏi một cú pháp đặc biệt dưới dạng item in items, trong đó items là mảng dữ liệu nguồn và item trỏ đến phần tử mảng đang được duyệt đến:
+	* Cơ bản về component
+		+ Component là các đối tượng Vue có thể sử dụng lại được với một cái tên: trong trường hợp này là <button-counter>. Chúng ta có thể dùng component này như là một phần tử bên trong đối tượng Vue gốc được tạo bởi new Vue	
+	*'v-model' giúp việc ràng buôc hai chiều(two-way binding)giữa form input và trạng thái ứng dụng trở nên dễ dàng hơn
+	* xử lí sự kiên(event)
  		+ event.stopPropagation(); // dừng sk
+ 	*computed thực hiện như một funtion nhưng nó chỉ được coi là một thuộc tính 
+ 	*watch theo dõi biến thay đổi
+ 	*shorthand

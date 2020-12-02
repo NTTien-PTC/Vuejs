@@ -5,9 +5,13 @@
         </head>
         <div id="obj">
             <div v-on:mousemove="toadochuot">
-                <span v-on:mouseover="dungchuot"> Dung su kien</span>
-
+                <span v-on:mouseover.stop=""> Dung su kien</span>
                 <p>Toa do cua chuot: {{x}} / {{y}}</p>
+                
+            </div>
+            
+            <div class="">
+                <input type="text" @keyup.enter.space= "banphim">
                 
             </div>
         </div>
@@ -26,7 +30,11 @@
                     },
                   dungchuot:function(event){
                     event.stopPropagation();
-                  }
+                  },
+                  banphim: function(){
+                      alert("hello")
+                  },
+
                 }
             })
 

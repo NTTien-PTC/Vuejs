@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>vue</title>
+        <script src="vue.js"></script>
+    </head>
+
+
+    <div id="app">
+        <p> {{diem}}</p>
+    </div>
+
+
+    <script>
+        var app = new Vue({
+            el:"#app",
+
+            data:{
+                diem:"8 diem"
+            }
+            ,watch:{
+                diem: function(newValue){
+                    alert('diem bi day doi ')
+                }
+            }
+
+
+        })
+        app.diem = " 9diem"
+
+
+    </script>
+</html>

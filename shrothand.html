@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>vue</title>
+        <script src="vue.js"></script>
+    </head>
+
+    <div id="app">
+        <button @click="changelink">thay doi link</button>
+        <a v-bind:href="link"> link</a>
+    </div>
+
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                link: 'https://vi.vuejs.org/v2/guide/index.html'
+            },
+            methods: {
+                changelink: function(){
+                    this.link = 'https://github.com/'
+                }
+            }
+        })
+    </script>
+</html>
