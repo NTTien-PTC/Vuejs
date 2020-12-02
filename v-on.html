@@ -7,7 +7,9 @@
     <div id="obj">
         <h1>Bam nut tang gia tri</h1>
         <button v-on:click="tgt">An nut </button>
+        <button v-on:click="demo++">An nut </button>
         <p>Trang {{demo}}</p>
+        <p>Trang {{demo >= 20 ? 'Thoat roi' : 'Dang trong' }}</p>
        
         </div>
     </div>
@@ -16,8 +18,6 @@
             el: "#obj",
             data: {
                 demo: 0,
-                x: 0,
-                y: 0
             },
             methods: {
                 

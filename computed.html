@@ -1,0 +1,38 @@
+<html>
+    <head><title>
+        vue
+    </title>
+<script src="vue.js"></script></head>
+    <div id="app">
+        <p>gia tri a {{ tanga }}</p>
+        <p>gia tri b {{ tangb }}</p>
+        <button v-on:click="a++">Tang a </button>
+        <button v-on:click="b++">Tang b </button>
+    </div>
+
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                a:0,
+                b:0
+            },
+            computed: {
+                tanga: function(){
+                    console.log("funtion a")
+                    return this.a
+                },
+                tangb: function(){
+                    console.log("funtion b")
+                   return this.b
+                }
+            },
+            methods:{
+              
+            }
+        })
+
+
+    </script>
+
+</html>

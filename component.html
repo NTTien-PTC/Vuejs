@@ -1,0 +1,26 @@
+<html>
+    <head>
+            <title>Vue</title>
+            <script src="vue.js"></script>
+    </head>
+
+    <div id="components-demo">
+        <button v-on:click="template">ban da bam </button>
+        <p> {{d}}</p>
+      </div>
+
+    <script>
+        new Vue({
+             el: '#components-demo' ,
+        data:{
+                d:0
+            
+        },
+       methods:{
+        template: function(){
+          this.d++
+        }
+    }
+        })
+    </script>
+</html>

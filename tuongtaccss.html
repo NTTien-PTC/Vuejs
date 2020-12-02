@@ -1,0 +1,51 @@
+<html>
+    <title>Vue js</title>
+    <script src="vue.js"></script>
+    <style>
+        .vuong{
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            display: inline-block;
+            margin:  100px;
+        }
+
+        .do{
+            background-color: red;
+        }
+        .xanh{
+            background-color: blue;
+        }
+    </style>
+
+    <div id="app">
+        <div class="vuong" @click="maudo =! maudo" :class="{do: maudo}"></div>
+        <div class="vuong" @click="maudo =! maudo" :class="{do: maudo}"></div>
+        <div class="vuong" @click="mauxanh =! mauxanh" :class="{xanh: mxanh}"></div>
+        <div class="vuong" @click="maudo =! maudo" :class="{do: maudo}"></div>
+    </div>
+
+
+    <script>
+        new Vue({
+            el:"#app",
+
+            data:{
+                maudo: false,
+                mauxanh: false
+            },
+            computed:{
+                    mxanh:function(){
+                        return this.mauxanh
+                    }
+            },
+            watch:{
+                mauxanh: function(newValue){
+                    alert('o thu 3 bi thay doi')
+                }
+            }
+            
+
+        })
+    </script>
+</html>
