@@ -1,0 +1,56 @@
+<html>
+    <title>Vuejs</title>
+    <script src="Vuejs/vue.js"></script>
+    <style>
+        .hinhvuong{
+            width: 100px;
+            height:  100px;
+            background-color: white;
+            display: inline-block ;
+            margin: 100px;
+        }
+        .do{
+            background-color: red;
+        }
+        .xanhduong{
+            background-color: blue;
+        }
+        .xanhlacay{                                                                         
+            background-color: green;
+        }
+        .hong{
+            background-color: hotpink;
+        }
+    </style>
+
+
+<div id="app">
+    <div class="hinhvuong" @click="maudo = !maudo" :class="{do : maudo}"></div>
+    <div class="hinhvuong"  :class="{do: maudo}"></div>                      
+    <div class="hinhvuong" :class="[color, {do: maudo}]"></div>
+    <hr>
+    <input type="text" v-model="color">
+    
+</div>
+
+<script> 
+    new Vue(    
+        {
+            el:'#app',
+            data: {
+                maudo: false,
+
+                color: 'xanhlacay'
+            },
+            computed: {
+                divClassese: function(){
+                    return{
+                        do: this.maudo,
+                        xanhduong: !this.maudo,
+                    }
+                }
+            }
+        }
+    )
+</script>
+    </html>
